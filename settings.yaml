@@ -1,0 +1,227 @@
+general:
+  label: 基本设置
+  items:
+    home_mode:
+      name: home_mode
+      label: 首页模式
+      type: select
+      default: post
+      options:
+        - value: post
+          label: 文章列表
+        - value: other
+          label: 个人资料
+    show_thumbnail:
+      name: show_thumbnail
+      label: 文章缩略图
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 显示
+        - value: false
+          label: 隐藏
+social:
+  label: 社交
+  items:
+    Github:
+      name: Github
+      label: Github
+      type: text
+      placeholder: '只需填入 Github 用户名即可'
+    LinkedIn:
+      name: LinkedIn
+      label: LinkedIn
+      type: text
+      placeholder: '只需填入 LinkedIn 用户名即可'
+    Twitter:
+      name: Twitter
+      label: Twitter
+      type: text
+      placeholder: '只需填入 Twitter 用户名即可'
+    Instagram:
+      name: Instagram
+      label: Instagram
+      type: text
+      placeholder: '只需填入 Instagram 用户名即可'
+    Email:
+      name: Email
+      label: Email
+      type: text
+      placeholder: '只需填入邮箱即可'
+    Facebook:
+      name: Facebook
+      label: Facebook
+      type: text
+      placeholder: '只需填入 Facebook 用户名即可'
+    Telegram:
+      name: Telegram
+      label: Telegram
+      type: text
+      placeholder: '只需填入 Telegram 用户名即可'
+    Stackoverflow:
+      name: Stackoverflow
+      label: Stackoverflow
+      type: text
+      placeholder: '只需填入 Stackoverflow 用户名即可'
+    Weibo:
+      name: Weibo
+      label: Weibo
+      type: text
+      placeholder: '只需填入 Weibo 用户名即可'
+    Steam:
+      name: Steam
+      label: Steam
+      type: text
+      placeholder: '只需填入 Steam 用户名即可'
+    Twitch:
+      name: Twitch
+      label: Twitch
+      type: text
+      placeholder: '只需填入 Twitch 用户名即可'
+    Zhihu:
+      name: Zhihu
+      label: Zhihu
+      type: text
+      placeholder: '只需填入 Zhihu 用户名即可'
+    Douban:
+      name: Douban
+      label: Douban
+      type: text
+      placeholder: '只需填入 Douban 用户名即可'
+socialShare:
+  label: 文章分享
+  items:
+    socialShare:
+      name: socialShare
+      label: 社交分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareTwitter:
+      name: shareTwitter
+      label: Twitter 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareFacebook:
+      name: shareFacebook
+      label: Facebook 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareReddit:
+      name: shareReddit
+      label: Reddit 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareLinkedin:
+      name: shareLinkedin
+      label: Linkedin 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sharePinterest:
+      name: sharePinterest
+      label: Pinterest 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareHackerNews:
+      name: shareHackerNews
+      label: HackerNews 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareMix:
+      name: shareMix
+      label: Mix 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareTumblr:
+      name: shareTumblr
+      label: Tumblr 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareVKontakte:
+      name: shareVKontakte
+      label: VKontakte 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareDouban:
+      name: shareDouban
+      label: Douban 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    shareWeibo:
+      name: shareWeibo
+      label: Weibo 分享
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
