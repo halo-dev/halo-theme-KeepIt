@@ -1,10 +1,10 @@
-<h1><a href="https://github.com/halo-dev" target="_blank">halo-theme-keepIt</a></h1>
+<h1><a href="https://github.com/halo-dev/halo-theme-keepIt" target="_blank">halo-theme-keepIt</a></h1>
 
 ## 说明
 
 该主题的原作者为 [Fastbyte01](https://fsb01.com)，非常感谢做出这么优秀的主题。
 
-原主题地址：[https://github.com/Fastbyte01/KeepIt](hhttps://github.com/Fastbyte01/KeepIt)
+原主题地址：[https://github.com/Fastbyte01/KeepIt](https://github.com/Fastbyte01/KeepIt)
 
 ## 预览截图
 
