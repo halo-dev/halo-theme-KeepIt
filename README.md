@@ -8,7 +8,7 @@
 
 ## 预览截图
 
-![screenshot.png](https://i.loli.net/2019/08/15/3hrG4RwJKse7mXQ.png)
+![screenshot.png](https://i.loli.net/2019/09/19/ILcRlGC5oVsEkeO.png)
 ![settings.png](https://i.loli.net/2019/08/15/mkUzFK2oRAdxEy3.png)
 
 ## 使用方法
