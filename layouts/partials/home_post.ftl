@@ -1,7 +1,7 @@
 <div class="post-warp">
 	<div class="intro">
 		<div class="avatar">
-			<a href="${context!}/archives/"> <img src="${user.avatar!}"> </a>
+			<a href="${archives_url!}"> <img src="${user.avatar!}"> </a>
 		</div>
 		<#if user.description??>
 			<h2 class="description">
@@ -13,7 +13,7 @@
 		<article class="post" itemscope="" itemtype="http://schema.org/Article">
 
 			<header class="post-header">
-				<h1 class="post-title" itemprop="name headline"><a href="${context!}/archives/${post.url!}">${post.title!}</a></h1>
+				<h1 class="post-title" itemprop="name headline"><a href="${post.fullPath!}">${post.title!}</a></h1>
 			</header>
 			<div class="post-content">
 				 <!--featured_image-->
@@ -21,7 +21,6 @@
           			<p><img src="${post.thumbnail!}" class="featured_image"></p>
        				</#if>
        			 <!-- end featured_image-->
-
        			${post.summary!}
 			</div>
 			<div class="post-footer">
@@ -34,7 +33,7 @@
 						<i class="iconfont icon-folder"></i>
 						<span class="post-category">
 							<#list post.categories as category>
-							  <a href="${context!}/categories/${category.slugName!}"> ${category.name!} </a>
+							  <a href="${category.fullPath!}"> ${category.name!} </a>
 							</#list>
 						</span>
 					</#if>
@@ -42,7 +41,7 @@
 				<#if post.tags??>
 					<div class="post-tags">
 						<#list post.tags as tag>
-						<span class="tag"><a href="${context!}/tags/${tag.slugName!}">${tag.name}</a></span>
+						<span class="tag"><a href="${tag.fullPath!}">${tag.name}</a></span>
 						</#list>
 					</div>
 				</#if>
@@ -52,43 +51,37 @@
 
 	<#if posts.totalPages gt 1>
 		<ul class="pagination">
-			<#if posts.hasPrevious()>
-				<#if posts.number == 1>
+			<@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+				<#if pagination.hasPrev>
 					<li class="page-item">
 						<span class="page-link">
-							<a href="${context!}/">首页</a>
-						</span>
-					</li>
-				<#else>
-					<li class="page-item">
-						<span class="page-link">
-							<a href="${context!}/page/${posts.number}">上一页</a>
+							<a href="${pagination.prevPageFullPath!}">上一页</a>
 						</span>
 					</li>
 				</#if>
-			</#if>
-			<#list rainbow as r>
-				<#if r == posts.number+1>
-					<li class="page-item active">
-						<span class="page-link">
-							<a href="${context!}/page/${posts.number+1}">${posts.number+1}</a>
-						</span>
-					</li>
-				<#else>
+				<#list pagination.rainbowPages as number>
+					<#if number.isCurrent>
+						<li class="page-item active">
+							<span class="page-link">
+								<a href="${number.fullPath!}">${number.page!}</a>
+							</span>
+						</li>
+					<#else>
+						<li class="page-item">
+							<span class="page-link">
+								<a href="${number.fullPath!}">${number.page!}</a>
+							</span>
+						</li>
+					</#if>
+				</#list>
+				<#if pagination.hasNext>
 					<li class="page-item">
 						<span class="page-link">
-							<a href="${context!}/page/${r}">${r}</a>
+							<a href="${pagination.nextPageFullPath!}">下一页</a>
 						</span>
 					</li>
 				</#if>
-			</#list>
-			<#if posts.hasNext()>
-				<li class="page-item">
-                    <span class="page-link">
-                        <a href="${context!}/page/${posts.number+2}/">下一页</a>
-                    </span>
-				</li>
-			</#if>
+			</@paginationTag>
 		</ul>
 	</#if>
 </div>

@@ -1,6 +1,6 @@
 <div class="intro">
    <div class="avatar">
-        <a href="${context!}/archives/"> <img src="${user.avatar!}"> </a>
+        <a href="${archives_url!}"> <img src="${user.avatar!}"> </a>
     </div>
     <#if user.description??>
     <h2 class="description">

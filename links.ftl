@@ -1,6 +1,6 @@
 <#include "layouts/_default/baseof.ftl">
 <#include "layouts/partials/comments.ftl">
-<@baseof title="友情链接 | ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/links">
+<@baseof title="友情链接 | ${blog_title!}" canonical="${links_url!}">
     <div class="post-warp archive">
         <h2 class="post-title" style="text-align:right;padding-bottom:2em">友情链接</h2>
         <div class="post-content">

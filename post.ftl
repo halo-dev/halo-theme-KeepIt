@@ -1,11 +1,11 @@
 <#include "layouts/_default/baseof.ftl">
 <#include "layouts/partials/comments.ftl">
-<@baseof title="${post.title!} | ${options.blog_title!}" keywords="${post.title!},${options.seo_keywords!},${tagWords!}" description="${post.summary!}" canonical="${context!}/archives/${post.url!}">
+<@baseof title="${post.title!} | ${blog_title!}" canonical="${post.fullPath!}">
 <article class="post-warp">
     <header class="post-header">
         <h1 class="post-title">${post.title!}</h1>
         <div class="post-meta">
-            Written by <a href="${context!}" rel="author">${user.nickname!}</a> with ♥
+            Written by <a href="${blog_url!}" rel="author">${user.nickname!}</a> with ♥
             <span class="post-time">
                     on <time datetime="${post.createTime?string('yyyy-MM-dd')}" >${post.createTime?string('yyyy年MM月dd日')}</time>
                 </span>
@@ -14,7 +14,7 @@
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
                     <#list categories as category>
-                        <a href="${context!}/categories/${category.slugName!}"> ${category.name!} </a>
+                        <a href="${category.fullPath!}"> ${category.name!} </a>
                     </#list>
                 </span>
             </#if>
@@ -61,23 +61,23 @@
         <section>
             <i class="iconfont icon-icon-tag"></i>标签:
             <#list tags as tag>
-            <span class="tag"><a href="${context!}/tags/${tag.slugName!}">
+            <span class="tag"><a href="${tag.fullPath!}">
                 #${tag.name!}</a></span>
             </#list>
         </section>
         </#if>
         <section>
             <a href="javascript:window.history.back();">返回</a></span> ·
-            <span><a href="${context!}">主页</a></span>
+            <span><a href="${blog_url!}">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         <#if nextPost??>
-        <a href="${context!}/archives/${nextPost.url}" class="prev" rel="prev" title="${nextPost.title}"><i class="iconfont icon-dajiantou"></i>&nbsp;${nextPost.title}</a>
+        <a href="${nextPost.fullPath!}" class="prev" rel="prev" title="${nextPost.title}"><i class="iconfont icon-dajiantou"></i>&nbsp;${nextPost.title}</a>
         </#if>
-        <#if prePost??>
-        <a href="${context!}/archives/${prePost.url}" class="next" rel="next" title="${prePost.title}">${prePost.title}&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <#if prevPost??>
+        <a href="${prevPost.fullPath!}" class="next" rel="next" title="${prevPost.title}">${prevPost.title}&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         </#if>
     </div>
 
