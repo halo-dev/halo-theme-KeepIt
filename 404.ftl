@@ -1,5 +1,5 @@
 <#include "layouts/_default/baseof.ftl">
-<@baseof title="404 | ${blog_title!}" canonical="${context!}/404">
+<@baseof title="404 | ${blog_title!}" canonical="${blog_url!}/404">
     <div class="notfound">
         <h1 class="error-emoji"></h1>
         <p class="error-text">/* 404 页面未找到. */</p>
